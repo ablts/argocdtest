@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ymir-front
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: ymir-front
+  templates:
+    metadata:
+      labels:
+        app: ymir-front
+    spec:
+      containers:
+      - image: ablts0/ymir-front:latest
+        name: ymir-front
+        ports:
+        - containerPort: 80
