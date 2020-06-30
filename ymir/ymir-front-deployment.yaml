@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ymir-front
 spec:
-  replicas: 2
+  replicas: 3 
   revisionHistorysLimit: 3
   selector:
     matchLabels:
